@@ -41,9 +41,9 @@ if(NOT MSVC AND NOT INCLUDED_AS_SUBPROJECT)
       -Wnull-dereference
       -Wnon-virtual-dtor
       -Woverloaded-virtual
-      -fPIC
       )
 endif()
+add_compile_options(-fPIC)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
