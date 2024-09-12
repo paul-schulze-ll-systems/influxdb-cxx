@@ -41,6 +41,7 @@ if(NOT MSVC AND NOT INCLUDED_AS_SUBPROJECT)
       -Wnull-dereference
       -Wnon-virtual-dtor
       -Woverloaded-virtual
+      -fPIC
       )
 endif()
 
