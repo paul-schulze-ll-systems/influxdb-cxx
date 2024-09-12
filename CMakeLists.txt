@@ -12,6 +12,7 @@ if(DEFINED PROJECT_NAME)
   set(INFLUXCXX_SYSTEMTEST OFF CACHE BOOL "system testing not available in sub-project")
   set(INFLUXCXX_COVERAGE OFF CACHE BOOL "coverage not available in sub-project")
 endif()
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 option(BUILD_SHARED_LIBS "Build shared versions of libraries" ON)
 option(INFLUXCXX_WITH_BOOST "Build with Boost support enabled" ON)
@@ -43,7 +44,6 @@ if(NOT MSVC AND NOT INCLUDED_AS_SUBPROJECT)
       -Woverloaded-virtual
       )
 endif()
-add_compile_options(-fPIC)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
